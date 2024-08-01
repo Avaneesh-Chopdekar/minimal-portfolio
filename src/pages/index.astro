@@ -93,20 +93,6 @@ const blog = (await getCollection("blog"))
           </p>
         </article>
         <ul class="flex flex-wrap gap-2">
-          {
-            SOCIALS.map((SOCIAL) => (
-              <li class="flex gap-x-2 text-nowrap">
-                <Link
-                  href={SOCIAL.HREF}
-                  external
-                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
-                >
-                  {SOCIAL.NAME}
-                </Link>
-                {"/"}
-              </li>
-            ))
-          }
           <li class="flex gap-x-2 text-nowrap">
             <Link
               href={SITE.RESUME}
@@ -116,6 +102,20 @@ const blog = (await getCollection("blog"))
               resume
             </Link>
           </li>
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                {"/"}
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+              </li>
+            ))
+          }
         </ul>
       </section>
     </div>
