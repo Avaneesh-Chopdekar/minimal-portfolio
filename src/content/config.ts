@@ -16,8 +16,11 @@ const projects = defineCollection({
     title: z.string(),
     description: z.string(),
     date: z.coerce.date(),
+    video: z.string(), // TODO: add it later
+    tags: z.array(z.string()), // TODO: add it later
     draft: z.boolean().optional(),
     demoURL: z.string().optional(),
+    liveURL: z.string().optional(),
     repoURL: z.string().optional(),
   }),
 });
