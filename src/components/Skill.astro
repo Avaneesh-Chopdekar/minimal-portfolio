@@ -66,11 +66,11 @@ const { tabs, tabPanels } = Astro.props;
   })
 }
 
-<script>
+<script is:inline data-astro-rerun>
   const tabs = document.querySelectorAll(".tab-btn");
   const panels = document.querySelectorAll(".tab-panel");
 
-  function selectTab(tab: Element, index: number) {
+  function selectTab(tab, index) {
     tabs.forEach((tab) => {
       tab.setAttribute("aria-selected", "false");
     });

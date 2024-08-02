@@ -43,7 +43,7 @@ const { faqs } = Astro.props;
   }
 </ul>
 
-<script>
+<script is:inline data-astro-rerun>
   const items = document.querySelectorAll<HTMLDetailsElement>(".details-item");
 
   items.forEach((item) => {
