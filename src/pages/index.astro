@@ -5,10 +5,12 @@ import { getCollection } from "astro:content";
 import PageLayout from "@layouts/PageLayout.astro";
 
 import Container from "@components/Container.astro";
-import ArrowCard from "@components/ArrowCard.astro";
-import Link from "@components/Link.astro";
-import Projects from "@components/Projects.astro";
 import Skills from "@components/Skill.astro";
+import Projects from "@components/Projects.astro";
+import FAQs from "@components/FAQs.astro";
+
+import Link from "@components/Link.astro";
+import ArrowCard from "@components/ArrowCard.astro";
 
 import {
   SITE,
@@ -19,6 +21,7 @@ import {
   mobileItems,
   backendItems,
   toolsItems,
+  faqs,
 } from "@consts";
 import { dateDiffInYears } from "@lib/utils";
 
@@ -84,6 +87,11 @@ const blog = (await getCollection("blog"))
           <Link href="/projects"> See all projects </Link>
         </div>
         <Projects projects={projects} />
+      </section>
+
+      <section class="animate space-y-6">
+        <h5 class="font-semibold text-black dark:text-white">FAQs</h5>
+        <FAQs faqs={faqs} />
       </section>
 
       <section class="animate space-y-6">

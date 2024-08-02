@@ -93,3 +93,27 @@ export const toolsItems: TabPanel[] = [
   { name: "Figma", icon: "/icons/skills/tools/figma.svg" },
   { name: "Google Analytics", icon: "/icons/skills/tools/ga4.svg" },
 ];
+
+export const faqs= [
+  {
+    question: "My educational background",
+    answer:
+      "I am currently in my 2nd year of BCA from Tilak Maharashtra Vidyapeeth. BCA stands for Bachelor's of Computer Applications, here we are taught theory behind computer science while also prioritizing practical knowledge.",
+  },
+  {
+    question: "My approach of learning a new technology or framework?",
+    answer:
+      "I first simply google the term and try to understand the documentation or watch a good youtube tutorial about it and practice it on my local machine by building a mini project. If I end up getting stuck I use stackoverflow or chatgpt else I read through the documentation about it.",
+  },
+  {
+    question: "How I manage my time and prioritize tasks?",
+    answer:
+      "I use google calendar to block my time with tasks and perform those tasks accoring to their priority. Like, the most important task will be finished by morning and so on.",
+  },
+  {
+    question: "My preference of working remotely or in an office?",
+    answer:
+      "I prefer office work for my first job as it fosters face-to-face interactions with colleagues, enhancing collaboration and learning. Immediate feedback and building strong relationships are crucial for my growth and understanding of company culture. While open to remote work if required, I believe starting on-site would be particularly beneficial.",
+  },
+];
+
