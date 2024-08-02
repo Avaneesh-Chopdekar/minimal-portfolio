@@ -23,7 +23,6 @@ const { tabs, tabPanels } = Astro.props;
           class={`tab-btn py-1 px-2 mr-2 rounded-md text-sm aria-selected:text-white aria-selected:bg-black dark:aria-selected:text-black dark:aria-selected:bg-white`}
           role="tab"
           id={`tab-${index}`}
-          tabindex={isSelected ? 0 : -1}
           aria-selected={isSelected}
           aria-controls={`panel-${index}`}
         >
@@ -37,7 +36,7 @@ const { tabs, tabPanels } = Astro.props;
   tabPanels.map((tabPanel, index) => {
     const isSelected = index === 0;
     return (
-      <ul
+      <div
         aria-expanded={isSelected}
         class={`tab-panel hidden aria-expanded:grid grid-cols-2 sm:grid-cols-4 gap-2`}
         role="tabpanel"
@@ -46,7 +45,7 @@ const { tabs, tabPanels } = Astro.props;
       >
         {tabPanel.map((tabPanelItem) => {
           return (
-            <li
+            <span
               class={`flex flex-col items-center justify-center gap-2 py-3 rounded-md border border-black/15 dark:border-white/20`}
             >
               <Image
@@ -59,10 +58,10 @@ const { tabs, tabPanels } = Astro.props;
                 aria-labelledby={tabPanelItem.name}
               />
               <span class="text-sm">{tabPanelItem.name}</span>
-            </li>
+            </span>
           );
         })}
-      </ul>
+      </div>
     );
   })
 }
@@ -71,12 +70,18 @@ const { tabs, tabPanels } = Astro.props;
   const tabs = document.querySelectorAll(".tab-btn");
   const panels = document.querySelectorAll(".tab-panel");
 
+  function selectTab(tab: Element, index: number) {
+    tabs.forEach((tab) => {
+      tab.setAttribute("aria-selected", "false");
+    });
+    panels.forEach((panel) => panel.setAttribute("aria-expanded", "false"));
+    tab.setAttribute("aria-selected", "true");
+    panels[index].setAttribute("aria-expanded", "true");
+  }
+
   tabs.forEach((tab, index) => {
     tab.addEventListener("click", () => {
-      tabs.forEach((tab) => tab.setAttribute("aria-selected", "false"));
-      panels.forEach((panel) => panel.setAttribute("aria-expanded", "false"));
-      tab.setAttribute("aria-selected", "true");
-      panels[index].setAttribute("aria-expanded", "true");
+      selectTab(tab, index);
     });
   });
 </script>

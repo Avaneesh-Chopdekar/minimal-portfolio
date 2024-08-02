@@ -13,7 +13,7 @@ importers:
         version: 0.5.9(typescript@5.4.2)
       '@astrojs/mdx':
         specifier: ^2.2.0
-        version: 2.2.0(astro@4.5.6)
+        version: 2.2.0(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2))
       '@astrojs/rss':
         specifier: ^4.0.5
         version: 4.0.5
@@ -22,7 +22,7 @@ importers:
         version: 3.1.1
       '@astrojs/tailwind':
         specifier: ^5.1.0
-        version: 5.1.0(astro@4.5.6)(tailwindcss@3.4.1)
+        version: 5.1.0(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2))(tailwindcss@3.4.1)
       '@fontsource/inter':
         specifier: ^5.0.17
         version: 5.0.17
@@ -34,13 +34,13 @@ importers:
         version: 0.5.10(tailwindcss@3.4.1)
       '@typescript-eslint/eslint-plugin':
         specifier: ^7.3.1
-        version: 7.3.1(@typescript-eslint/parser@7.3.1)(eslint@8.57.0)(typescript@5.4.2)
+        version: 7.3.1(@typescript-eslint/parser@7.3.1(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)
       '@typescript-eslint/parser':
         specifier: ^7.3.1
         version: 7.3.1(eslint@8.57.0)(typescript@5.4.2)
       astro:
         specifier: ^4.5.6
-        version: 4.5.6(typescript@5.4.2)
+        version: 4.5.6(@types/node@22.1.0)(typescript@5.4.2)
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -704,6 +704,9 @@ packages:
 
   '@types/node@17.0.45':
     resolution: {integrity: sha512-w+tIMs3rq2afQdsPJlODhoUEKzFP1ayaoyl1CcnwtIlsVe7K7bA1NGm4s3PraqTLlXnbIN84zuBlxBWo1u9BLw==}
+
+  '@types/node@22.1.0':
+    resolution: {integrity: sha512-AOmuRF0R2/5j1knA3c6G3HOk523Ga+l+ZXltX8SF1+5oqcXijjfTd8fY3XRZqSihEu9XhtQnKYLmkFaoxgsJHw==}
 
   '@types/sax@1.2.7':
     resolution: {integrity: sha512-rO73L89PJxeYM3s3pPPjiPgVVcymqU490g0YO5n5By0k2Erzj6tay/4lr1CHAAU4JyOWd1rpQ8bCf6cZfHU96A==}
@@ -2883,6 +2886,9 @@ packages:
   unbox-primitive@1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
 
+  undici-types@6.13.0:
+    resolution: {integrity: sha512-xtFJHudx8S2DSoujjMd1WeWvn7KKWFRESZTMeL1RptAYERu29D6jphMjjY+vn96jvN3kVPDNxU/E13VTaXj6jg==}
+
   unherit@3.0.1:
     resolution: {integrity: sha512-akOOQ/Yln8a2sgcLj4U0Jmx0R5jpIg2IUyRrWOzmEbjBtGzBdHtSeFKgoEcoH4KYIG/Pb8GQ/BwtYm0GCq1Sqg==}
 
@@ -3243,12 +3249,12 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@astrojs/mdx@2.2.0(astro@4.5.6)':
+  '@astrojs/mdx@2.2.0(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2))':
     dependencies:
       '@astrojs/markdown-remark': 4.3.0
       '@mdx-js/mdx': 3.0.1
       acorn: 8.11.3
-      astro: 4.5.6(typescript@5.4.2)
+      astro: 4.5.6(@types/node@22.1.0)(typescript@5.4.2)
       es-module-lexer: 1.4.2
       estree-util-visit: 2.0.0
       github-slugger: 2.0.0
@@ -3278,9 +3284,9 @@ snapshots:
       sitemap: 7.1.1
       zod: 3.22.4
 
-  '@astrojs/tailwind@5.1.0(astro@4.5.6)(tailwindcss@3.4.1)':
+  '@astrojs/tailwind@5.1.0(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2))(tailwindcss@3.4.1)':
     dependencies:
-      astro: 4.5.6(typescript@5.4.2)
+      astro: 4.5.6(@types/node@22.1.0)(typescript@5.4.2)
       autoprefixer: 10.4.18(postcss@8.4.37)
       postcss: 8.4.37
       postcss-load-config: 4.0.2(postcss@8.4.37)
@@ -3823,9 +3829,13 @@ snapshots:
 
   '@types/node@17.0.45': {}
 
+  '@types/node@22.1.0':
+    dependencies:
+      undici-types: 6.13.0
+
   '@types/sax@1.2.7':
     dependencies:
-      '@types/node': 17.0.45
+      '@types/node': 22.1.0
 
   '@types/semver@7.5.8': {}
 
@@ -3833,7 +3843,7 @@ snapshots:
 
   '@types/unist@3.0.2': {}
 
-  '@typescript-eslint/eslint-plugin@7.3.1(@typescript-eslint/parser@7.3.1)(eslint@8.57.0)(typescript@5.4.2)':
+  '@typescript-eslint/eslint-plugin@7.3.1(@typescript-eslint/parser@7.3.1(eslint@8.57.0)(typescript@5.4.2))(eslint@8.57.0)(typescript@5.4.2)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 7.3.1(eslint@8.57.0)(typescript@5.4.2)
@@ -3848,6 +3858,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.6.0
       ts-api-utils: 1.3.0(typescript@5.4.2)
+    optionalDependencies:
       typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
@@ -3860,6 +3871,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 7.3.1
       debug: 4.3.4
       eslint: 8.57.0
+    optionalDependencies:
       typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
@@ -3881,6 +3893,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.57.0
       ts-api-utils: 1.3.0(typescript@5.4.2)
+    optionalDependencies:
       typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
@@ -3899,6 +3912,7 @@ snapshots:
       minimatch: 9.0.3
       semver: 7.6.0
       ts-api-utils: 1.3.0(typescript@5.4.2)
+    optionalDependencies:
       typescript: 5.4.2
     transitivePeerDependencies:
       - supports-color
@@ -4099,7 +4113,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  astro@4.5.6(typescript@5.4.2):
+  astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2):
     dependencies:
       '@astrojs/compiler': 2.7.0
       '@astrojs/internal-helpers': 0.3.0
@@ -4157,8 +4171,8 @@ snapshots:
       tsconfck: 3.0.3(typescript@5.4.2)
       unist-util-visit: 5.0.0
       vfile: 6.0.1
-      vite: 5.1.6
-      vitefu: 0.2.5(vite@5.1.6)
+      vite: 5.1.6(@types/node@22.1.0)
+      vitefu: 0.2.5(vite@5.1.6(@types/node@22.1.0))
       which-pm: 2.1.1
       yargs-parser: 21.1.1
       zod: 3.22.4
@@ -6155,8 +6169,9 @@ snapshots:
   postcss-load-config@4.0.2(postcss@8.4.37):
     dependencies:
       lilconfig: 3.1.1
-      postcss: 8.4.37
       yaml: 2.4.1
+    optionalDependencies:
+      postcss: 8.4.37
 
   postcss-nested@6.0.1(postcss@8.4.37):
     dependencies:
@@ -6759,7 +6774,7 @@ snapshots:
   ts-interface-checker@0.1.13: {}
 
   tsconfck@3.0.3(typescript@5.4.2):
-    dependencies:
+    optionalDependencies:
       typescript: 5.4.2
 
   tslib@2.6.2: {}
@@ -6823,6 +6838,8 @@ snapshots:
       has-bigints: 1.0.2
       has-symbols: 1.0.3
       which-boxed-primitive: 1.0.2
+
+  undici-types@6.13.0: {}
 
   unherit@3.0.1: {}
 
@@ -6951,55 +6968,61 @@ snapshots:
       unist-util-stringify-position: 4.0.0
       vfile-message: 4.0.2
 
-  vite@5.1.6:
+  vite@5.1.6(@types/node@22.1.0):
     dependencies:
       esbuild: 0.19.12
       postcss: 8.4.37
       rollup: 4.13.0
     optionalDependencies:
+      '@types/node': 22.1.0
       fsevents: 2.3.3
 
-  vitefu@0.2.5(vite@5.1.6):
-    dependencies:
-      vite: 5.1.6
+  vitefu@0.2.5(vite@5.1.6(@types/node@22.1.0)):
+    optionalDependencies:
+      vite: 5.1.6(@types/node@22.1.0)
 
   volar-service-css@0.0.34(@volar/language-service@2.1.2):
     dependencies:
-      '@volar/language-service': 2.1.2
       vscode-css-languageservice: 6.2.12
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.2
 
   volar-service-emmet@0.0.34(@volar/language-service@2.1.2):
     dependencies:
-      '@volar/language-service': 2.1.2
       '@vscode/emmet-helper': 2.9.2
       vscode-html-languageservice: 5.1.2
+    optionalDependencies:
+      '@volar/language-service': 2.1.2
 
   volar-service-html@0.0.34(@volar/language-service@2.1.2):
     dependencies:
-      '@volar/language-service': 2.1.2
       vscode-html-languageservice: 5.1.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.2
 
   volar-service-prettier@0.0.34(@volar/language-service@2.1.2):
     dependencies:
-      '@volar/language-service': 2.1.2
       vscode-uri: 3.0.8
+    optionalDependencies:
+      '@volar/language-service': 2.1.2
 
   volar-service-typescript-twoslash-queries@0.0.34(@volar/language-service@2.1.2):
-    dependencies:
+    optionalDependencies:
       '@volar/language-service': 2.1.2
 
   volar-service-typescript@0.0.34(@volar/language-service@2.1.2):
     dependencies:
-      '@volar/language-service': 2.1.2
       path-browserify: 1.0.1
       semver: 7.6.0
       typescript-auto-import-cache: 0.3.2
       vscode-languageserver-textdocument: 1.0.11
       vscode-nls: 5.2.0
+    optionalDependencies:
+      '@volar/language-service': 2.1.2
 
   vscode-css-languageservice@6.2.12:
     dependencies:
