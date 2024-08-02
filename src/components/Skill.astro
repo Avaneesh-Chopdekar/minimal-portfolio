@@ -67,21 +67,23 @@ const { tabs, tabPanels } = Astro.props;
 }
 
 <script is:inline data-astro-rerun>
-  const tabs = document.querySelectorAll(".tab-btn");
-  const panels = document.querySelectorAll(".tab-panel");
+  document.addEventListener("astro:after-swap", () => {
+    const tabs = document.querySelectorAll(".tab-btn");
+    const panels = document.querySelectorAll(".tab-panel");
 
-  function selectTab(tab, index) {
-    tabs.forEach((tab) => {
-      tab.setAttribute("aria-selected", "false");
-    });
-    panels.forEach((panel) => panel.setAttribute("aria-expanded", "false"));
-    tab.setAttribute("aria-selected", "true");
-    panels[index].setAttribute("aria-expanded", "true");
-  }
+    function selectTab(tab, index) {
+      tabs.forEach((tab) => {
+        tab.setAttribute("aria-selected", "false");
+      });
+      panels.forEach((panel) => panel.setAttribute("aria-expanded", "false"));
+      tab.setAttribute("aria-selected", "true");
+      panels[index].setAttribute("aria-expanded", "true");
+    }
 
-  tabs.forEach((tab, index) => {
-    tab.addEventListener("click", () => {
-      selectTab(tab, index);
+    tabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        selectTab(tab, index);
+      });
     });
   });
 </script>
