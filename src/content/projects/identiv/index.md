@@ -1,10 +1,10 @@
 ---
-title: "Astro Sphere"
-description: "Portfolio and blog build with astro."
-date: "Mar 18 2024"
-liveURL: "https://astro-sphere-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-sphere"
+title: "Identiv"
+description: "Developed a secure face recognition system using Python and FastAPI, featuring vector embeddings for user data storage, spoof detection, and an admin dashboard for management."
+date: "August 15 2024"
+repoURL: "https://github.com/avaneesh-chopdekar/identiv"
 video: "/demo/identiv.mp4"
+# draft: true
 tags:
   [
     "python",

@@ -79,15 +79,19 @@ const blog = (await getCollection("blog"))
         />
       </section>
 
-      <section class="animate space-y-6">
-        <div class="flex flex-wrap gap-y-2 items-center justify-between">
-          <h5 class="font-semibold text-black dark:text-white">
-            Recent projects
-          </h5>
-          <Link href="/projects"> See all projects </Link>
-        </div>
-        <Projects projects={projects} />
-      </section>
+      {
+        projects.length > 0 ? (
+          <section class="animate space-y-6">
+            <div class="flex flex-wrap gap-y-2 items-center justify-between">
+              <h5 class="font-semibold text-black dark:text-white">
+                Recent projects
+              </h5>
+              <Link href="/projects"> See all projects </Link>
+            </div>
+            <Projects projects={projects} />
+          </section>
+        ) : null
+      }
 
       <section class="animate space-y-6">
         <h5 class="font-semibold text-black dark:text-white">FAQs</h5>

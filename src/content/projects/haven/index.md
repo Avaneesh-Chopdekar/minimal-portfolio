@@ -1,10 +1,10 @@
 ---
-title: "Astro Nano"
-description: "Minimal portfolio and blog build with astro and no frameworks."
-date: "Mar 26 2024"
-liveURL: "https://astro-nano-demo.vercel.app"
-repoURL: "https://github.com/markhorn-dev/astro-nano"
+title: "Haven"
+description: "Developed a global video call and chat messaging app with real-time communication using WebRTC and Socket.io, incorporating TensorFlow.js for object detection, profanity filters for user safety, and a Pub/Sub model for infinite scalability."
+date: "August 30 2024"
+repoURL: "https://github.com/avaneesh-chopdekar/haven"
 video: "/demo/haven.mp4"
+# draft: true
 tags: ["next.js", "webrtc", "socket.io", "pub-sub", "tensorflow.js"]
 ---
 

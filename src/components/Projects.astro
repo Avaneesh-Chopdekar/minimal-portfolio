@@ -18,6 +18,7 @@ const { projects } = Astro.props;
           autoplay
           muted
           loop
+          tabindex="-1"
         />
         <h4 class="font-bold text-xl my-3">{project.data.title}</h4>
         <p class="text-sm text-black/50 dark:text-white/75">
@@ -37,6 +38,12 @@ const { projects } = Astro.props;
             target="_blank"
           >
             Github
+          </a>
+          <a
+            class="py-1 px-2 rounded-md bg-black text-white dark:bg-white dark:text-black"
+            href={`/projects/${project.slug}`}
+          >
+            Blog
           </a>
           {project.data.liveURL ? (
             <a
