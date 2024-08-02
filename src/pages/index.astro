@@ -8,8 +8,18 @@ import Container from "@components/Container.astro";
 import ArrowCard from "@components/ArrowCard.astro";
 import Link from "@components/Link.astro";
 import Projects from "@components/Projects.astro";
+import Skills from "@components/Skill.astro";
 
-import { SITE, HOME, SOCIALS } from "@consts";
+import {
+  SITE,
+  HOME,
+  SOCIALS,
+  skills,
+  webItems,
+  mobileItems,
+  backendItems,
+  toolsItems,
+} from "@consts";
 import { dateDiffInYears } from "@lib/utils";
 
 const age = dateDiffInYears(new Date("2005-08-20"), new Date(Date.now()));
@@ -56,6 +66,14 @@ const blog = (await getCollection("blog"))
             </Link> for a quick overview of my skills and projects.
           </p>
         </article>
+      </section>
+
+      <section class="animate space-y-6">
+        <h5 class="font-semibold text-black dark:text-white">My skills</h5>
+        <Skills
+          tabs={skills}
+          tabPanels={[webItems, mobileItems, backendItems, toolsItems]}
+        />
       </section>
 
       <section class="animate space-y-6">
