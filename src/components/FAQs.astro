@@ -44,18 +44,22 @@ const { faqs } = Astro.props;
 </ul>
 
 <script is:inline data-astro-rerun>
-  document.addEventListener("astro:after-swap", () => {
-    const items =
-      document.querySelectorAll<HTMLDetailsElement>(".details-item");
+  function main() {
+    const details = document.querySelectorAll(".details-item");
 
-    items.forEach((item) => {
-      item.addEventListener("click", () => {
-        items.forEach((otherItems) => {
-          if (otherItems !== item && otherItems.open) {
-            otherItems.open = false;
+    details.forEach((detail) => {
+      detail.addEventListener("click", () => {
+        // Close all other open details
+        details.forEach((otherDetail) => {
+          if (otherDetail !== detail && otherDetail.open) {
+            otherDetail.open = false;
           }
         });
       });
     });
-  });
+  }
+
+  main();
+
+  document.addEventListener("astro:page-load", main);
 </script>

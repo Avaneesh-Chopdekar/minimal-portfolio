@@ -67,7 +67,7 @@ const { tabs, tabPanels } = Astro.props;
 }
 
 <script is:inline data-astro-rerun>
-  document.addEventListener("astro:after-swap", () => {
+  function main() {
     const tabs = document.querySelectorAll(".tab-btn");
     const panels = document.querySelectorAll(".tab-panel");
 
@@ -85,5 +85,11 @@ const { tabs, tabPanels } = Astro.props;
         selectTab(tab, index);
       });
     });
+  }
+
+  main();
+
+  document.addEventListener("astro:page-load", () => {
+    main();
   });
 </script>
