@@ -4,81 +4,40 @@ description: "Developed a global video call and chat messaging app with real-tim
 date: "August 30 2024"
 repoURL: "https://github.com/avaneesh-chopdekar/haven"
 video: "/demo/haven.mp4"
-# draft: true
+draft: true
 tags: ["next.js", "webrtc", "socket.io", "pub-sub", "tensorflow.js"]
 ---
 
-![Astro Nano](/astro-nano.png)
+## Description
 
-Astro Nano is a static, minimalist, lightweight, lightning fast portfolio and blog theme.
+Haven is a video call and chat messaging app that connects people across the globe. We've built a real-time communication platform that seamlessly integrates WebRTC and Socket.IO to enable low-latency video calls.
 
-Built with Astro, Tailwind and Typescript, an no frameworks.
+### Technical details
 
-It was designed as an even more minimal theme than my popular theme [Astro Sphere](https://github.com/markhorn-dev/astro-sphere)
+- **WebRTC**: Enables low-latency, real-time communication between users.
+- **Socket.IO**: Provides real-time, bidirectional communication between clients and servers.
+- **TensorFlow.js**: Used for object detection, profanity filters, and other AI-powered features.
 
-## 🚀 Deploy your own
+### Features
 
-<div class="flex gap-2">
-  <a target="_blank" aria-label="Deploy with Vercel" href="https://vercel.com/new/clone?repository-url=https://github.com/markhorn-dev/astro-nano">
-    <img src="/deploy_vercel.svg" />
-  </a>
-  <a target="_blank" aria-label="Deploy with Netlify" href="https://app.netlify.com/start/deploy?repository=https://github.com/markhorn-dev/astro-nano">
-    <img src="/deploy_netlify.svg" />
-  </a>
-</div>
+- **Real-time Video Calls**: Join virtual meetings with friends, family, or colleagues.
+- **End-to-End Encryption**: Protect your privacy with end-to-end encryption.
+- **Profanity Filters**: Ensure a safe and respectful communication environment.
+- **AI-Powered Features**: Stay connected with AI-powered features like object detection and sentiment analysis.
 
-## 📋 Features
+### Architecture
 
-- ✅ 100/100 Lighthouse performance
-- ✅ Responsive
-- ✅ Accessible
-- ✅ SEO-friendly
-- ✅ Typesafe
-- ✅ Minimal style
-- ✅ Light/Dark Theme
-- ✅ Animated UI
-- ✅ Tailwind styling
-- ✅ Auto generated sitemap
-- ✅ Auto generated RSS Feed
-- ✅ Markdown support
-- ✅ MDX Support (components in your markdown)
+- **Pub/Sub Model**: Scale your application horizontally with a Publisher-Subscriber model.
+- **Scalable Infrastructure**: Built on top of containerized and cloud-native technologies.
+- **Continuous Integration/Deployment**: Automated testing and deployment processes ensure a smooth application lifecycle.
 
-## 💯 Lighthouse score
+### Roadmap
 
-![Astro Nano Lighthouse Score](/lighthouse.png)
+- **Audio/Video Call Recording**: Enable users to record their conversations.
+- **Screen Sharing**: Share your screen with others for presentations or collaboration.
+- **AI-Powered Chatbots**: Integrate chatbots for customer support and other purposes.
+- **Virtual Whiteboard**: Collaborate with others using a virtual whiteboard.
 
-## 🕊️ Lightweight
+### Contributing
 
-No frameworks or added bulk
-
-## ⚡︎ Fast
-
-Rendered in ~40ms on localhost
-
-## 📄 Configuration
-
-The blog posts on the demo serve as the documentation and configuration.
-
-## 💻 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-Replace npm with your package manager of choice. `npm`, `pnpm`, `yarn`, `bun`, etc
-
-| Command                   | Action                                            |
-| :------------------------ | :------------------------------------------------ |
-| `npm install`             | Installs dependencies                             |
-| `npm run dev`             | Starts local dev server at `localhost:4321`       |
-| `npm run dev:network`     | Starts local dev server on local network          |
-| `npm run sync`            | Generates TypeScript types for all Astro modules. |
-| `npm run build`           | Build your production site to `./dist/`           |
-| `npm run preview`         | Preview your build locally, before deploying      |
-| `npm run preview:network` | Preview build on local network                    |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check`  |
-| `npm run astro -- --help` | Get help using the Astro CLI                      |
-| `npm run lint`            | Run ESLint                                        |
-| `npm run lint:fix`        | Auto-fix ESLint issues                            |
-
-## 🏛️ License
-
-MIT
+We welcome contributions from the open-source community. If you're interested in contributing, please join our [GitHub repository](https://github.com/avaneesh-chopdekar/haven).
