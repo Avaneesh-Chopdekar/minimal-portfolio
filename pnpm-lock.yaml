@@ -41,6 +41,12 @@ importers:
       astro:
         specifier: ^4.5.6
         version: 4.5.6(@types/node@22.1.0)(typescript@5.4.2)
+      astro-og-canvas:
+        specifier: ^0.5.3
+        version: 0.5.3(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2))
+      canvaskit-wasm:
+        specifier: ^0.39.1
+        version: 0.39.1
       clsx:
         specifier: ^2.1.0
         version: 2.1.0
@@ -825,6 +831,9 @@ packages:
   '@vscode/l10n@0.0.18':
     resolution: {integrity: sha512-KYSIHVmslkaCDyw013pphY+d7x1qV8IZupYfeIfzNA+nsaWHbn5uPuQRvdRFsa9zFzGeudPuoGoZ1Op4jrJXIQ==}
 
+  '@webgpu/types@0.1.21':
+    resolution: {integrity: sha512-pUrWq3V5PiSGFLeLxoGqReTZmiiXwY3jRkIG5sLLKjyqNxrwm/04b4nw7LSmGWJcKk59XOM/YRTUwOzo4MMlow==}
+
   acorn-jsx@5.3.2:
     resolution: {integrity: sha512-rq9s+JNhf0IChjtDXxllJ7g41oZk5SlXtp0LHwyA5cejwn7vKmKp4pPri6YEePv2PU65sAsegbXtIinmDFDXgQ==}
     peerDependencies:
@@ -917,6 +926,12 @@ packages:
   astro-eslint-parser@0.16.3:
     resolution: {integrity: sha512-CGaBseNtunAV2DCpwBXqTKq8+9Tw65XZetMaC0FsMoZuLj0gxNIkbCf2QyKYScVrNOU7/ayfNdVw8ZCSHBiqCg==}
     engines: {node: ^14.18.0 || >=16.0.0}
+
+  astro-og-canvas@0.5.3:
+    resolution: {integrity: sha512-xy4k3D/fq4vq71B8CKsqBRuAd2kRJjMaeOMH9EFVtPPqudrDGXG2k87SdxPr5FATvttWpIjYplqK/vYJAoZ2DA==}
+    engines: {node: '>=18.14.1'}
+    peerDependencies:
+      astro: ^3.0.0 || ^4.0.0
 
   astro@4.5.6:
     resolution: {integrity: sha512-/pXr+tDvgps1x3w+9i48XzfNPDr4NrT89EJPeCTL57IjaTpitSQ8Oy10Fv6zAqXNLIUJ5j3P1c+fJx+taKIg0g==}
@@ -1030,6 +1045,9 @@ packages:
 
   caniuse-lite@1.0.30001599:
     resolution: {integrity: sha512-LRAQHZ4yT1+f9LemSMeqdMpMxZcc4RMWdj4tiFe3G8tNkWK+E58g+/tzotb5cU6TbcVJLr4fySiAW7XmxQvZQA==}
+
+  canvaskit-wasm@0.39.1:
+    resolution: {integrity: sha512-Gy3lCmhUdKq+8bvDrs9t8+qf7RvcjuQn+we7vTVVyqgOVO1UVfHpsnBxkTZw+R4ApEJ3D5fKySl9TU11hmjl/A==}
 
   ccount@2.0.1:
     resolution: {integrity: sha512-eyrF0jiFpY+3drT6383f1qhkbGsLSifNAjA61IUjZjmLCWjItY6LB9ft9YhoDgwfmclB2zhu51Lc7+95b8NRAg==}
@@ -4003,6 +4021,8 @@ snapshots:
 
   '@vscode/l10n@0.0.18': {}
 
+  '@webgpu/types@0.1.21': {}
+
   acorn-jsx@5.3.2(acorn@8.11.3):
     dependencies:
       acorn: 8.11.3
@@ -4112,6 +4132,13 @@ snapshots:
       semver: 7.6.0
     transitivePeerDependencies:
       - supports-color
+
+  astro-og-canvas@0.5.3(astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2)):
+    dependencies:
+      astro: 4.5.6(@types/node@22.1.0)(typescript@5.4.2)
+      canvaskit-wasm: 0.39.1
+      deterministic-object-hash: 2.0.2
+      entities: 4.5.0
 
   astro@4.5.6(@types/node@22.1.0)(typescript@5.4.2):
     dependencies:
@@ -4321,6 +4348,10 @@ snapshots:
   camelcase@7.0.1: {}
 
   caniuse-lite@1.0.30001599: {}
+
+  canvaskit-wasm@0.39.1:
+    dependencies:
+      '@webgpu/types': 0.1.21
 
   ccount@2.0.1: {}
 

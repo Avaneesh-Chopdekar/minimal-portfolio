@@ -19,9 +19,15 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props;
 const { Content } = await post.render();
+
+const ogImage = `${Astro.site?.origin}/og/${post.slug}.png`;
 ---
 
-<PageLayout title={post.data.title} description={post.data.description}>
+<PageLayout
+  title={post.data.title}
+  description={post.data.description}
+  image={ogImage}
+>
   <Container>
     <div class="animate">
       <BackToPrev href="/blog"> Back to blog </BackToPrev>
