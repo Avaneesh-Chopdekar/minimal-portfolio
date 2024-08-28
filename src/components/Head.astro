@@ -69,6 +69,22 @@ const { title, description, image = "/og/home.jpg" } = Astro.props;
 
 <ViewTransitions />
 
+<!-- Google tag (gtag.js) -->
+<script
+  type="text/partytown"
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-PMSB9ETF9L"></script>
+<script type="text/partytown">
+  window.dataLayer = window.dataLayer || [];
+  function gtag() {
+    // eslint-disable-next-line no-undef
+    dataLayer.push(arguments);
+  }
+  gtag("js", new Date());
+
+  gtag("config", "G-PMSB9ETF9L");
+</script>
+
 <script>
   import type { TransitionBeforeSwapEvent } from "astro:transitions/client";
   document.addEventListener("astro:before-swap", (e) =>
