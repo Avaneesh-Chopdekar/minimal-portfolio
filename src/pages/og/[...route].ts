@@ -16,6 +16,11 @@ export const { getStaticPaths, GET } = OGImageRoute({
   getImageOptions: (path, page: { title: string; description: string }) => ({
     title: page.title,
     description: page.description.split(".")[0] + ".",
+    font: {
+      title: {
+        size: 58,
+      },
+    },
     logo: {
       path: "./public/avaneesh.webp",
       size: [250],

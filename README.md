@@ -27,7 +27,7 @@ It was made on top of [Astro Nano Template](https://github.com/markhorn-dev/astr
 
 ## ✅ Todo
 
-- [ ] Dynamic open graph image
+- [x] Dynamic open graph image
 - [ ] i18n
 
 ## 🏛️ License
