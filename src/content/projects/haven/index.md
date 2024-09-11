@@ -4,7 +4,6 @@ description: "Developed a global video call and chat messaging app with real-tim
 date: "August 30 2024"
 repoURL: "https://github.com/avaneesh-chopdekar/haven"
 video: "/demo/haven.mp4"
-draft: true
 tags: ["next.js", "webrtc", "socket.io", "pub-sub", "tensorflow.js"]
 ---
 
