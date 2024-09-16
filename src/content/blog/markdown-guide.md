@@ -81,10 +81,10 @@ _You **can** combine them_
 ## Images
 
 ```
-![This is an alt text.](https://source.unsplash.com/200x200?code "This is a sample image.")
+![This is an alt text.](https://picsum.photos/200 "This is a sample image.")
 ```
 
-![This is an alt text.](https://source.unsplash.com/200x200?code "This is a sample image.")
+![This is an alt text.](https://picsum.photos/200 "This is a sample image.")
 
 ## Links
 
