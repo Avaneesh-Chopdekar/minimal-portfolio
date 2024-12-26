@@ -12,7 +12,7 @@ date: 2024-12-26
 3. User Management
 4. Documentation
 5. Security
-6. User Experience
+6. Offline First
 7. Custom Domain
 8. Share In Public
 
