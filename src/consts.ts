@@ -3,7 +3,8 @@ import type { TabPanel } from "@components/Skill.astro";
 
 export const SITE: Site = {
   NAME: "Avaneesh Chopdekar",
-  RESUME: "/avaneesh-chopdekar-resume.pdf",
+  RESUME:
+    "https://drive.google.com/file/d/1FDORsmZ_mw0OcvV4nfzMl4oYSF_vDB66/view?usp=sharing",
   NUM_POSTS_ON_HOMEPAGE: 3,
   NUM_WORKS_ON_HOMEPAGE: 2,
   NUM_PROJECTS_ON_HOMEPAGE: 3,
@@ -94,7 +95,7 @@ export const toolsItems: TabPanel[] = [
   { name: "Google Analytics", icon: "/icons/skills/tools/ga4.svg" },
 ];
 
-export const faqs= [
+export const faqs = [
   {
     question: "My educational background",
     answer:
@@ -116,4 +117,3 @@ export const faqs= [
       "I prefer office work for my first job as it fosters face-to-face interactions with colleagues, enhancing collaboration and learning. Immediate feedback and building strong relationships are crucial for my growth and understanding of company culture. While open to remote work if required, I believe starting on-site would be particularly beneficial.",
   },
 ];
-
