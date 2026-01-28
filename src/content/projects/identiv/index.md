@@ -8,9 +8,6 @@ image: "/demo/identiv.png"
 tags:
   ["python", "django", "face-recognition", "vector-embeddings", "anti-spoofing"]
 ---
-Absolutely — here’s a **blog article** for your **Identiv project** (GitHub: [https://github.com/Avaneesh-Chopdekar/Identiv](https://github.com/Avaneesh-Chopdekar/Identiv)):
-
----
 
 In a world where secure and intuitive access control is essential for organizations of all sizes, your *Identiv* project stands out as a **full-fledged, AI-assisted face recognition security system** built using modern web technologies. It combines biometric login, organizational workflows, and intelligent user management — making identity verification faster and more secure.
 
@@ -132,7 +129,3 @@ Here are directions you could take this project further:
 *Identiv* isn’t just another Django app — it’s a **complete face recognition-enabled access and identity management system**. By combining secure biometric authentication with customizable organizational logic and analytics, it demonstrates how modern biometric systems can be built using open source tools.
 
 It’s a great showcase of **applied machine learning, web engineering, and system design** — and a strong portfolio piece for anyone interested in security-focused applications.
-
----
-
-If you want, I can help you turn this into a **Medium/Dev.to-ready markdown version** with headings, code snippets, and visuals!
